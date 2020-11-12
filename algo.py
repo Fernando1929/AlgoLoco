@@ -112,9 +112,9 @@ def getFreeHoursInCommon1(a,b):
                                 result[i].append(leader[i][j]) 
 
         return result
-s2 = timeit.default_timer()
 
 print(getFreeHoursInCommon1(leader_searchFreeSchedule,member_searchFreeSchedule))
+s2 = timeit.default_timer()
 print('Time with loops: ', s2 - s1)  
 
 #receive the leader root of the day and member root of the day returns the array of slots in common
