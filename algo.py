@@ -100,7 +100,6 @@ for i in range(period):
 
 
 # a and b are array of bsts 
-s1 = timeit.default_timer()
 def getFreeHoursInCommon1(a,b):
         result = [[]for i in range(period)]
         leader = [Node.inorderarr(a[x],[]) for x in range(period)] #without time in common
@@ -112,7 +111,8 @@ def getFreeHoursInCommon1(a,b):
                                 result[i].append(leader[i][j]) 
 
         return result
-
+        
+s1 = timeit.default_timer()
 print(getFreeHoursInCommon1(leader_searchFreeSchedule,member_searchFreeSchedule))
 s2 = timeit.default_timer()
 print('Time with loops: ', s2 - s1)  
