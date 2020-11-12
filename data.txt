@@ -1,0 +1,62 @@
+{
+    "status": "success",
+    "results": 2,
+    "data": {
+        "schedule": [
+            {
+                "user_schedule_id": 1,
+                "event_title": "Clase",
+                "start_date_time": "2018-06-25T11:00:00.000Z",
+                "end_date_time": "2018-06-25T11:30:00.000Z",
+                "r_rule": null,
+                "ex_dates": null,
+                "user_id": 1
+            },
+            {
+                "user_schedule_id": 2,
+                "event_title": "clase1",
+                "start_date_time": "2018-06-25T16:00:00.000Z",
+                "end_date_time": "2018-06-25T16:30:00.000Z",
+                "r_rule": null,
+                "ex_dates": null,
+                "user_id": 1
+            },
+                        {
+                "user_schedule_id": 1,
+                "event_title": "Clase",
+                "start_date_time": "2018-06-25M11:00:00.000Z",
+                "end_date_time": "2018-06-25M11:30:00.000Z",
+                "r_rule": null,
+                "ex_dates": null,
+                "user_id": 1
+            },
+            {
+                "user_schedule_id": 2,
+                "event_title": "clase1",
+                "start_date_time": "2018-06-25R14:00:00.000Z",
+                "end_date_time": "2018-06-25R14:30:00.000Z",
+                "r_rule": null,
+                "ex_dates": null,
+                "user_id": 1
+            },
+                        {
+                "user_schedule_id": 1,
+                "event_title": "Clase",
+                "start_date_time": "2018-06-25F11:00:00.000Z",
+                "end_date_time": "2018-06-25F11:30:00.000Z",
+                "r_rule": null,
+                "ex_dates": null,
+                "user_id": 1
+            },
+            {
+                "user_schedule_id": 2,
+                "event_title": "clase1",
+                "start_date_time": "2018-06-25W15:00:00.000Z",
+                "end_date_time": "2018-06-25W15:30:00.000Z",
+                "r_rule": null,
+                "ex_dates": null,
+                "user_id": 1
+            }
+        ]
+    }
+}
