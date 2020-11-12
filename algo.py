@@ -73,14 +73,15 @@ for i in range(period):
 # Print the tree
 # for i in range(period):
 #     print("tree of", days[i])
-#     Node.inorder( search_busySchedule[i])
+#     Node.inorder( search_freeSchedule[i])
 
 
 # a and b are array of bsts 
 def getFreeHoursInCommon(a,b):
         result = [[]for i in range(period)]
-        leader = [Node.inorderarr(a[x],[]) for x in range(period)]
-        print(leader)
+        leader = [Node.inorderarr(a[x],[]) for x in range(period)] #without time in common
+        #leader = [[12, 13, 13.5], [10, 13.5, 15], [13.5, 15], [13.5, 14], [11, 13.5], [13.5], [13.5]] #with time in common 
+         #print(leader)
         for i in range(len(leader)):
                 for j in range(len(leader[i])):
                         if Node.search(b[i],leader[i][j]) != None and Node.search(b[i],leader[i][j]) != b[i] :
