@@ -29,6 +29,15 @@ class Node:
             print(root.val)
             Node.inorder(root.right)
     
+    def inorderarr(root,ls):
+        result = []
+        if root:
+            result = result + Node.inorderarr(root.left,result)
+            result.append(root.val)
+            result = result + Node.inorderarr(root.right,result)
+        
+        return result
+
     def search(root,key):
         # Base Cases: root is null or key is present at root
         if root is None or root.val == key:

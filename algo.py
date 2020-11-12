@@ -56,22 +56,36 @@ freeSlot = getFreeTimeSlots()
 
 # This is the schedule of the person
 # This is not needed is just the fake appointments for testing
-#search_busySchedule = [Node(mean) for i in range(period)]
+search_busySchedule = [Node(mean) for i in range(period)]
 
 #This is the tree with the free slots of time
 search_freeSchedule = [Node(mean) for i in range(period)]
 
 ###Second: we put it in the tree
-# for i in range(period):
-#     for j in range(len(schedule[i])):
-#         search_busySchedule[i] = Node.insert(search_busySchedule[i],schedule[i][j])
+for i in range(period):
+    for j in range(len(schedule[i])):
+        search_busySchedule[i] = Node.insert(search_busySchedule[i],schedule[i][j])
 
 for i in range(period):
     for j in range(len(freeSlot[i])):
         search_freeSchedule[i] = Node.insert(search_freeSchedule[i],freeSlot[i][j])
 
 # Print the tree
-print()
-for i in range(period):
-    print("tree of", days[i])
-    Node.inorder( search_freeSchedule[i])
+# for i in range(period):
+#     print("tree of", days[i])
+#     Node.inorder( search_busySchedule[i])
+
+
+# a and b are array of bsts 
+def getFreeHoursInCommon(a,b):
+        result = [[]for i in range(period)]
+        leader = [Node.inorderarr(a[x],[]) for x in range(period)]
+        print(leader)
+        for i in range(len(leader)):
+                for j in range(len(leader[i])):
+                        if Node.search(b[i],leader[i][j]) != None and Node.search(b[i],leader[i][j]) != b[i] :
+                                result[i].append(leader[i][j]) 
+
+        return result
+
+print(getFreeHoursInCommon(search_busySchedule,search_freeSchedule))
